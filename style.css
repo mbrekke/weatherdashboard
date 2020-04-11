@@ -567,7 +567,7 @@ img {
     margin-bottom: 55px;
     font-weight: bolder;
     color: #13f28a;
-    font-size: 2em;
+    font-size: 5em;
 }
 
 .bottom-forecastgrid {
@@ -616,8 +616,6 @@ img {
 
 .bottom-forecastgrid-one-highlow {
     margin: auto;
-    margin-top: 22px;
-    margin-bottom: 22px;
     text-align: center;
 
     display: grid;
@@ -628,15 +626,15 @@ img {
 
 .bottom-forecastgrid-one-highlow-high{
     font-weight: bold;
-    color: white;
-    font-size: 2em;
+    color: black;
+    font-size: 3em;
     grid-area: high;
 }
 
 .bottom-forecastgrid-one-highlow-low {
     font-weight: bold;
-    color: white;
-    font-size: 2em;
+    color: black;
+    font-size: 3em;
     grid-area: low;
 }
 
@@ -669,6 +667,30 @@ img {
     font-size: 20px;
 }
 
+.bottom-forecastgrid-two-highlow {
+    margin: auto;
+    text-align: center;
+
+    display: grid;
+    grid-template-areas: 
+    "high low";
+    grid-template-columns: 1fr, 1fr;
+}
+
+.bottom-forecastgrid-two-highlow-high{
+    font-weight: bold;
+    color: black;
+    font-size: 3em;
+    grid-area: high;
+}
+
+.bottom-forecastgrid-two-highlow-low {
+    font-weight: bold;
+    color: black;
+    font-size: 3em;
+    grid-area: low;
+}
+
 .bottom-forecastgrid-three {
     width: 285px;
     height: 414px;
@@ -696,6 +718,30 @@ img {
     font-weight: normal;
     color: black;
     font-size: 20px;
+}
+
+.bottom-forecastgrid-three-highlow {
+    margin: auto;
+    text-align: center;
+
+    display: grid;
+    grid-template-areas: 
+    "high low";
+    grid-template-columns: 1fr, 1fr;
+}
+
+.bottom-forecastgrid-three-highlow-high{
+    font-weight: bold;
+    color: black;
+    font-size: 3em;
+    grid-area: high;
+}
+
+.bottom-forecastgrid-three-highlow-low {
+    font-weight: bold;
+    color: black;
+    font-size: 3em;
+    grid-area: low;
 }
 
 .bottom-forecastgrid-four {
@@ -727,6 +773,30 @@ img {
     font-size: 20px;
 }
 
+.bottom-forecastgrid-four-highlow {
+    margin: auto;
+    text-align: center;
+
+    display: grid;
+    grid-template-areas: 
+    "high low";
+    grid-template-columns: 1fr, 1fr;
+}
+
+.bottom-forecastgrid-four-highlow-high{
+    font-weight: bold;
+    color: black;
+    font-size: 3em;
+    grid-area: high;
+}
+
+.bottom-forecastgrid-four-highlow-low {
+    font-weight: bold;
+    color: black;
+    font-size: 3em;
+    grid-area: low;
+}
+
 .bottom-forecastgrid-five {
     width: 285px;
     height: 414px;
@@ -755,6 +825,30 @@ img {
     font-weight: normal;
     color: black;
     font-size: 20px;
+}
+
+.bottom-forecastgrid-five-highlow {
+    margin: auto;
+    text-align: center;
+
+    display: grid;
+    grid-template-areas: 
+    "high low";
+    grid-template-columns: 1fr, 1fr;
+}
+
+.bottom-forecastgrid-five-highlow-high{
+    font-weight: bold;
+    color: black;
+    font-size: 3em;
+    grid-area: high;
+}
+
+.bottom-forecastgrid-five-highlow-low {
+    font-weight: bold;
+    color: black;
+    font-size: 3em;
+    grid-area: low;
 }
 
 @media screen and (max-width: 1024) and (min-width: 768px){}
