@@ -1,0 +1,835 @@
+@import url('https://fonts.googleapis.com/css2?family=Muli:wght@500&display=swap');
+
+body {
+    width: 768px;
+    font-family: "Muli";
+    background-color: #1d1c40;
+}
+
+.search {
+    width: 241px;
+    height: 42px;
+    margin: auto;
+    margin-top: 41px;
+    margin-bottom: 44px;
+    background-color: #575684;
+    align-content: center;
+}
+
+.location {
+    margin: auto;
+    margin-bottom: 55px;
+    text-align: center;
+    font-weight: bolder;
+    color: #13f28a;
+    font-size: 3.5em;
+}
+
+.current {
+    width: 677px;
+    height: 1575px;
+    background-color: #575684;
+    margin: auto;
+}
+
+.current-date {
+    font-weight: normal;
+    color: #13f28a;
+    font-size: 34px;
+    text-align: center;
+    margin: auto;
+    padding-top: 20px;
+}
+
+.current-time {
+    margin: auto;
+    margin-top: 18px;
+    font-weight: normal;
+    color: #13f28a;
+    font-size: 2em;
+    text-align: center;
+}
+
+img {
+    display: block;
+    margin: auto;
+    width: auto;
+}
+
+.current-currenttemp {
+    font-weight: bold;
+    color: white;
+    font-size: 5em;
+    margin: auto;
+    text-align: center;
+}
+
+.current-highlow {
+    width: 167px;
+    height: 47px;
+    margin: auto;
+    margin-top: 22px;
+    margin-bottom: 22px;
+    text-align: center;
+
+    display: grid;
+    grid-template-areas: 
+    "high low";
+    grid-template-columns: 1fr, 1fr;
+}
+
+.current-highlow-high {
+    font-weight: bold;
+    color: white;
+    font-size: 2em;
+    grid-area: high;
+}
+
+.current-highlow-low {
+    font-weight: bold;
+    color: white;
+    font-size: 2em;
+    grid-area: low;
+}
+
+.current-other {
+    margin: auto;
+}
+
+.current-other-top {
+    margin: auto;
+    width: 394px;
+    height: 62px;
+
+    display: grid;
+    grid-template-areas: 
+    "one two three";
+    grid-template-columns: 1fr, 1fr, 1fr;
+}
+
+.current-other-top-uv {
+    margin: auto;
+    grid-area: one;
+}
+
+.current-other-top-uv-title {
+    font-weight: normal;
+    color: white;
+    font-size: small;
+    text-align: center;
+}
+
+.current-other-top-uv-number {
+    font-weight: normal;
+    color: white;
+    font-size: medium;
+    text-align: center;
+}
+
+.current-other-top-chanceofrain {
+    margin: auto;
+    grid-area: two;
+}
+
+.current-other-top-chanceofrain-title {
+    font-weight: normal;
+    color: white;
+    font-size: small; 
+    text-align: center;
+}
+
+.current-other-top-chanceofrain-number {
+    font-weight: normal;
+    color: white;
+    font-size: medium;
+    text-align: center;
+}
+
+.current-other-top-humidity {
+    margin: auto;
+    grid-area: three;
+}
+
+.current-other-top-humidity-title {
+    font-weight: normal;
+    color: white;
+    font-size: small; 
+    text-align: center;
+}
+
+.current-other-top-humidity-number {
+    font-weight: normal;
+    color: white;
+    font-size: medium;
+    text-align: center;
+}
+
+.current-other-bottom {
+    margin: auto;
+    margin-bottom: 40px;
+    width: 274px;
+    height: 59px;
+
+    display: grid;
+    grid-template-areas: 
+    "one two";
+    grid-template-columns: 1fr, 1fr;
+}
+
+.current-other-bottom-wind {
+    margin: auto;
+    grid-area: one;
+}
+
+.current-other-bottom-wind-title {
+    font-weight: normal;
+    color: white;
+    font-size: small; 
+    text-align: center;
+}
+
+.current-other-bottom-wind-number {
+    font-weight: normal;
+    color: white;
+    font-size: medium;
+    text-align: center;
+}
+
+.current-other-bottom-visibility {
+    margin: auto;
+    grid-area: two;
+}
+
+.current-other-bottom-visibility-title {
+    font-weight: normal;
+    color: white;
+    font-size: small; 
+    text-align: center;
+}
+
+.current-other-bottom-visibility-number {
+    font-weight: normal;
+    color: white;
+    font-size: medium;
+    text-align: center;
+}
+
+.current-hourlytitle {
+    margin: auto;
+    text-align: center;
+    font-weight: bold;
+    color: #13f28a;
+    font-size: 30px;
+}
+
+.current-hourly {
+    width: 232px;
+    height: 45px;
+    margin: auto;
+    align-content: center;
+}
+
+.current-hourly-one {
+    margin: auto;
+
+    display: grid;
+    grid-template-areas: 
+    "time icon temp";
+    grid-template-columns: 1fr, 1fr, 1fr;
+}
+
+.current-hourly-one-time {
+    margin: auto;
+    grid-area: time;
+    font-weight: normal;
+    color: white;
+    font-size: 25px; 
+}
+
+.current-hourly-one-icon {
+    margin: auto;
+    grid-area: icon;
+}
+
+.current-hourly-one-temp {
+    margin: auto;
+    grid-area: temp;
+    font-weight: normal;
+    color: white;
+    font-size: 25px; 
+}
+
+.current-hourly-two {
+    margin: auto;
+
+    display: grid;
+    grid-template-areas: 
+    "time icon temp";
+    grid-template-columns: 1fr, 1fr, 1fr;
+}
+
+.current-hourly-two-time {
+    margin: auto;
+    grid-area: time;
+    font-weight: normal;
+    color: white;
+    font-size: 25px; 
+}
+
+.current-hourly-two-icon {
+    margin: auto;
+    grid-area: icon;
+}
+
+.current-hourly-two-temp {
+    margin: auto;
+    grid-area: temp;
+    font-weight: normal;
+    color: white;
+    font-size: 25px; 
+}
+
+.current-hourly-three {
+    margin: auto;
+
+    display: grid;
+    grid-template-areas: 
+    "time icon temp";
+    grid-template-columns: 1fr, 1fr, 1fr;
+}
+
+.current-hourly-three-time {
+    margin: auto;
+    grid-area: time;
+    font-weight: normal;
+    color: white;
+    font-size: 25px; 
+}
+
+.current-hourly-three-icon {
+    margin: auto;
+    grid-area: icon;
+}
+
+.current-hourly-three-temp {
+    margin: auto;
+    grid-area: temp;
+    font-weight: normal;
+    color: white;
+    font-size: 25px; 
+}
+
+.current-hourly-four {
+    margin: auto;
+
+    display: grid;
+    grid-template-areas: 
+    "time icon temp";
+    grid-template-columns: 1fr, 1fr, 1fr;
+}
+
+.current-hourly-four-time {
+    margin: auto;
+    grid-area: time;
+    font-weight: normal;
+    color: white;
+    font-size: 25px; 
+}
+
+.current-hourly-four-icon {
+    margin: auto;
+    grid-area: icon;
+}
+
+.current-hourly-four-temp {
+    margin: auto;
+    grid-area: temp;
+    font-weight: normal;
+    color: white;
+    font-size: 25px; 
+}
+
+.current-hourly-five {
+    margin: auto;
+
+    display: grid;
+    grid-template-areas: 
+    "time icon temp";
+    grid-template-columns: 1fr, 1fr, 1fr;
+}
+
+.current-hourly-five-time {
+    margin: auto;
+    grid-area: time;
+    font-weight: normal;
+    color: white;
+    font-size: 25px; 
+}
+
+.current-hourly-five-icon {
+    margin: auto;
+    grid-area: icon;
+}
+
+.current-hourly-five-temp {
+    margin: auto;
+    grid-area: temp;
+    font-weight: normal;
+    color: white;
+    font-size: 25px; 
+}
+
+.current-hourly-six {
+    margin: auto;
+
+    display: grid;
+    grid-template-areas: 
+    "time icon temp";
+    grid-template-columns: 1fr, 1fr, 1fr;
+}
+
+.current-hourly-six-time {
+    margin: auto;
+    grid-area: time;
+    font-weight: normal;
+    color: white;
+    font-size: 25px; 
+}
+
+.current-hourly-six-icon {
+    margin: auto;
+    grid-area: icon;
+}
+
+.current-hourly-six-temp {
+    margin: auto;
+    grid-area: temp;
+    font-weight: normal;
+    color: white;
+    font-size: 25px; 
+}
+
+.current-hourly-seven {
+    margin: auto;
+
+    display: grid;
+    grid-template-areas: 
+    "time icon temp";
+    grid-template-columns: 1fr, 1fr, 1fr;
+}
+
+.current-hourly-seven-time {
+    margin: auto;
+    grid-area: time;
+    font-weight: normal;
+    color: white;
+    font-size: 25px; 
+}
+
+.current-hourly-seven-icon {
+    margin: auto;
+    grid-area: icon;
+}
+
+.current-hourly-seven-temp {
+    margin: auto;
+    grid-area: temp;
+    font-weight: normal;
+    color: white;
+    font-size: 25px; 
+}
+
+.current-hourly-eight {
+    margin: auto;
+
+    display: grid;
+    grid-template-areas: 
+    "time icon temp";
+    grid-template-columns: 1fr, 1fr, 1fr;
+}
+
+.current-hourly-eight-time {
+    margin: auto;
+    grid-area: time;
+    font-weight: normal;
+    color: white;
+    font-size: 25px; 
+}
+
+.current-hourly-eight-icon {
+    margin: auto;
+    grid-area: icon;
+}
+
+.current-hourly-eight-temp {
+    margin: auto;
+    grid-area: temp;
+    font-weight: normal;
+    color: white;
+    font-size: 25px; 
+}
+
+.current-hourly-nine {
+    margin: auto;
+
+    display: grid;
+    grid-template-areas: 
+    "time icon temp";
+    grid-template-columns: 1fr, 1fr, 1fr;
+}
+
+.current-hourly-nine-time {
+    margin: auto;
+    grid-area: time;
+    font-weight: normal;
+    color: white;
+    font-size: 25px; 
+}
+
+.current-hourly-nine-icon {
+    margin: auto;
+    grid-area: icon;
+}
+
+.current-hourly-nine-temp {
+    margin: auto;
+    grid-area: temp;
+    font-weight: normal;
+    color: white;
+    font-size: 25px; 
+}
+
+.current-hourly-ten {
+    margin: auto;
+
+    display: grid;
+    grid-template-areas: 
+    "time icon temp";
+    grid-template-columns: 1fr, 1fr, 1fr;
+}
+
+.current-hourly-ten-time {
+    margin: auto;
+    grid-area: time;
+    font-weight: normal;
+    color: white;
+    font-size: 25px; 
+}
+
+.current-hourly-ten-icon {
+    margin: auto;
+    grid-area: icon;
+}
+
+.current-hourly-ten-temp {
+    margin: auto;
+    grid-area: temp;
+    font-weight: normal;
+    color: white;
+    font-size: 25px; 
+}
+
+.radar {
+    width: 688px;
+    height: 477px;
+    margin: auto;
+    margin-top: 35px;
+    margin-bottom: 55px;
+    background-color: #575684;
+}
+
+.bottom {
+    width: 100vw;
+    height: 667px;
+    position: absolute;
+    margin: auto;
+    margin-top: 45px;
+}
+
+.bottom-title {
+    margin: auto;
+    margin-bottom: 55px;
+    margin-left: 155px;
+    font-weight: bolder;
+    color: #13f28a;
+    font-size: 4em;
+}
+
+.bottom-forecast {
+    width: 319px;
+    height: 2162px;
+    background-color: #575684;
+    margin: auto;
+    margin-top: 40px;
+    margin-left: 225px;
+    padding-top: 10px;
+}
+
+.bottom-forecast-one {
+    width: 285px;
+    height: 414px;
+    margin: auto;
+    margin-left: 18px;
+    grid-area: one;
+    background-color: #9998be;
+    padding-top: 5px;
+}
+
+.bottom-forecast-one-dayofweek {
+    margin: auto;
+    margin-top: 15px;
+    margin-left: 15px;
+    font-weight: normal;
+    color: black;
+    font-size: 20px;
+}
+
+.bottom-forecast-one-date {
+    margin: auto;
+    margin-top: 15px;
+    margin-left: 15px;
+    font-weight: normal;
+    color: black;
+    font-size: 20px;
+}
+
+.bottom-forecast-one-highlow {
+    margin: auto;
+    text-align: center;
+
+    display: grid;
+    grid-template-areas: 
+    "high low";
+    grid-template-columns: 1fr, 1fr;
+}
+
+.bottom-forecast-one-highlow-high{
+    font-weight: bold;
+    color: black;
+    font-size: 3em;
+    grid-area: high;
+}
+
+.bottom-forecast-one-highlow-low {
+    font-weight: bold;
+    color: black;
+    font-size: 3em;
+    grid-area: low;
+}
+
+.bottom-forecast-two {
+    width: 285px;
+    height: 414px;
+    margin: auto;
+    margin-top: 11px;
+    margin-bottom: 11px;
+    margin-left: 18px;
+    grid-area: two;
+    background-color: #9998be;
+    padding-top: 5px;
+}
+
+.bottom-forecast-two-dayofweek {
+    margin: auto;
+    margin-top: 15px;
+    margin-left: 15px;
+    font-weight: normal;
+    color: black;
+    font-size: 20px;
+}
+
+.bottom-forecast-two-date {
+    margin: auto;
+    margin-top: 15px;
+    margin-left: 15px;
+    font-weight: normal;
+    color: black;
+    font-size: 20px;
+}
+
+.bottom-forecast-two-highlow {
+    margin: auto;
+    text-align: center;
+
+    display: grid;
+    grid-template-areas: 
+    "high low";
+    grid-template-columns: 1fr, 1fr;
+}
+
+.bottom-forecast-two-highlow-high{
+    font-weight: bold;
+    color: black;
+    font-size: 3em;
+    grid-area: high;
+}
+
+.bottom-forecast-two-highlow-low {
+    font-weight: bold;
+    color: black;
+    font-size: 3em;
+    grid-area: low;
+}
+
+.bottom-forecast-three {
+    width: 285px;
+    height: 414px;
+    margin: auto;
+    margin-top: 11px;
+    margin-bottom: 11px;
+    margin-left: 18px;
+    grid-area: three;
+    background-color: #9998be;
+    padding-top: 5px;
+}
+
+.bottom-forecast-three-dayofweek {
+    margin: auto;
+    margin-top: 15px;
+    margin-left: 15px;
+    font-weight: normal;
+    color: black;
+    font-size: 20px;
+}
+
+.bottom-forecast-three-date {
+    margin: auto;
+    margin-top: 15px;
+    margin-left: 15px;
+    font-weight: normal;
+    color: black;
+    font-size: 20px;
+}
+
+.bottom-forecast-three-highlow {
+    margin: auto;
+    text-align: center;
+
+    display: grid;
+    grid-template-areas: 
+    "high low";
+    grid-template-columns: 1fr, 1fr;
+}
+
+.bottom-forecast-three-highlow-high{
+    font-weight: bold;
+    color: black;
+    font-size: 3em;
+    grid-area: high;
+}
+
+.bottom-forecast-three-highlow-low {
+    font-weight: bold;
+    color: black;
+    font-size: 3em;
+    grid-area: low;
+}
+
+.bottom-forecast-four {
+    width: 285px;
+    height: 414px;
+    margin: auto;
+    margin-top: 11px;
+    margin-bottom: 11px;
+    margin-left: 18px;
+    grid-area: four;
+    background-color: #9998be;
+    padding-top: 5px;
+}
+
+.bottom-forecast-four-dayofweek {
+    margin: auto;
+    margin-top: 15px;
+    margin-left: 15px;
+    font-weight: normal;
+    color: black;
+    font-size: 20px;
+}
+
+.bottom-forecast-four-date {
+    margin: auto;
+    margin-top: 15px;
+    margin-left: 15px;
+    font-weight: normal;
+    color: black;
+    font-size: 20px;
+}
+
+.bottom-forecast-four-highlow {
+    margin: auto;
+    text-align: center;
+
+    display: grid;
+    grid-template-areas: 
+    "high low";
+    grid-template-columns: 1fr, 1fr;
+}
+
+.bottom-forecast-four-highlow-high{
+    font-weight: bold;
+    color: black;
+    font-size: 3em;
+    grid-area: high;
+}
+
+.bottom-forecast-four-highlow-low {
+    font-weight: bold;
+    color: black;
+    font-size: 3em;
+    grid-area: low;
+}
+
+.bottom-forecast-five {
+    width: 285px;
+    height: 414px;
+    margin: auto;
+    margin-top: 11px;
+    margin-right: 18px;
+    margin-bottom: 11px;
+    margin-left: 18px;
+    grid-area: five;
+    background-color: #9998be;
+    padding-top: 5px;
+}
+
+.bottom-forecast-five-dayofweek {
+    margin: auto;
+    margin-top: 15px;
+    margin-left: 15px;
+    font-weight: normal;
+    color: black;
+    font-size: 20px;
+}
+
+.bottom-forecast-five-date {
+    margin: auto;
+    margin-top: 15px;
+    margin-left: 15px;
+    font-weight: normal;
+    color: black;
+    font-size: 20px;
+}
+
+.bottom-forecast-five-highlow {
+    margin: auto;
+    text-align: center;
+
+    display: grid;
+    grid-template-areas: 
+    "high low";
+    grid-template-columns: 1fr, 1fr;
+}
+
+.bottom-forecast-five-highlow-high{
+    font-weight: bold;
+    color: black;
+    font-size: 3em;
+    grid-area: high;
+}
+
+.bottom-forecast-five-highlow-low {
+    font-weight: bold;
+    color: black;
+    font-size: 3em;
+    grid-area: low;
+}

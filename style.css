@@ -850,9 +850,3 @@ img {
     font-size: 3em;
     grid-area: low;
 }
-
-@media screen and (max-width: 1024) and (min-width: 768px){
-    
-}
-
-@media screen and (max-width: 767px) {}
