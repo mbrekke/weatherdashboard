@@ -39,12 +39,9 @@ body {
 .grid-left-location {
     margin: auto;
     margin-bottom: 55px;
-}
-
-h1 {
-    font-weight: bold;
+    font-weight: bolder;
     color: #13f28a;
-    font-size: xx-large;
+    font-size: 3em;
 }
 
 .grid-left-radar {
@@ -57,7 +54,7 @@ h1 {
 
 .grid1-right {
     width: 405px;
-    height: 1401px;
+    height: 1410px;
     margin: auto;
     grid-area: right;
     background-color: #575684;
@@ -66,16 +63,15 @@ h1 {
 .grid1-right-date {
     font-weight: bold;
     color: #13f28a;
-    font-size: large;
+    font-size: 2em;
     text-align: center;
+    margin-top: 18px;
 }
 
 .grid1-right-time {
     margin: auto;
-}
-
-h2 {
-    font-weight: normal;
+    margin-top: 18px;
+    font-weight: 2em;
     color: #13f28a;
     font-size: large;
     text-align: center;
@@ -83,8 +79,7 @@ h2 {
 
 .grid1-right-icon{
     margin: auto;
-    margin-top: 18px;
-    margin-bottom: 18px;
+    margin-top: 12px;
 }
 
 img {
@@ -96,18 +91,16 @@ img {
 .grid1-right-currenttemp {
     font-weight: bold;
     color: white;
-    font-size: x-large;
-}
-
-h3 {
-    font-weight: bolder;
-    color: white;
-    font-size: x-large;
+    font-size: 5em;
+    margin: auto;
     text-align: center;
 }
 
 .grid1-right-highlow {
     margin: auto;
+    margin-top: 22px;
+    margin-bottom: 22px;
+    text-align: center;
 
     display: grid;
     grid-template-areas: 
@@ -118,14 +111,14 @@ h3 {
 .grid1-right-highlow-high {
     font-weight: bold;
     color: white;
-    font-size: small;
+    font-size: 2em;
     grid-area: high;
 }
 
 .grid1-right-highlow-low {
     font-weight: bold;
     color: white;
-    font-size: small;
+    font-size: 2em;
     grid-area: low;
 }
 
@@ -151,12 +144,14 @@ h3 {
     font-weight: normal;
     color: white;
     font-size: small;
+    text-align: center;
 }
 
 .grid1-right-other-top-uv-number {
     font-weight: normal;
     color: white;
     font-size: medium;
+    text-align: center;
 }
 
 .grid1-right-other-top-chanceofrain {
@@ -168,12 +163,14 @@ h3 {
     font-weight: normal;
     color: white;
     font-size: small; 
+    text-align: center;
 }
 
 .grid1-right-other-top-chanceofrain-number {
     font-weight: normal;
     color: white;
     font-size: medium;
+    text-align: center;
 }
 
 .grid1-right-other-top-humidity {
@@ -185,12 +182,14 @@ h3 {
     font-weight: normal;
     color: white;
     font-size: small; 
+    text-align: center;
 }
 
 .grid1-right-other-top-humidity-number {
     font-weight: normal;
     color: white;
     font-size: medium;
+    text-align: center;
 }
 
 .grid1-right-other-bottom {
@@ -211,12 +210,14 @@ h3 {
     font-weight: normal;
     color: white;
     font-size: small; 
+    text-align: center;
 }
 
 .grid1-right-other-bottom-wind-number {
     font-weight: normal;
     color: white;
     font-size: medium;
+    text-align: center;
 }
 
 .grid1-right-other-bottom-visibility {
@@ -228,12 +229,14 @@ h3 {
     font-weight: normal;
     color: white;
     font-size: small; 
+    text-align: center;
 }
 
 .grid1-right-other-bottom-visibility-number {
     font-weight: normal;
     color: white;
     font-size: medium;
+    text-align: center;
 }
 
 .grid1-right-hourlytitle {
@@ -241,10 +244,12 @@ h3 {
     text-align: center;
     font-weight: bold;
     color: #13f28a;
-    font-size: large;
+    font-size: 30px;
 }
 
 .grid1-right-hourly {
+    width: 232px;
+    height: 45px;
     margin: auto;
     align-content: center;
 }
@@ -263,7 +268,7 @@ h3 {
     grid-area: time;
     font-weight: normal;
     color: white;
-    font-size: small; 
+    font-size: 20px; 
 }
 
 .grid1-right-hourly-one-icon {
@@ -276,7 +281,277 @@ h3 {
     grid-area: temp;
     font-weight: normal;
     color: white;
-    font-size: small; 
+    font-size: 20px; 
+}
+
+.grid1-right-hourly-two {
+    margin: auto;
+
+    display: grid;
+    grid-template-areas: 
+    "time icon temp";
+    grid-template-columns: 1fr, 1fr, 1fr;
+}
+
+.grid1-right-hourly-two-time {
+    margin: auto;
+    grid-area: time;
+    font-weight: normal;
+    color: white;
+    font-size: 20px; 
+}
+
+.grid1-right-hourly-two-icon {
+    margin: auto;
+    grid-area: icon;
+}
+
+.grid1-right-hourly-two-temp {
+    margin: auto;
+    grid-area: temp;
+    font-weight: normal;
+    color: white;
+    font-size: 20px; 
+}
+
+.grid1-right-hourly-three {
+    margin: auto;
+
+    display: grid;
+    grid-template-areas: 
+    "time icon temp";
+    grid-template-columns: 1fr, 1fr, 1fr;
+}
+
+.grid1-right-hourly-three-time {
+    margin: auto;
+    grid-area: time;
+    font-weight: normal;
+    color: white;
+    font-size: 20px; 
+}
+
+.grid1-right-hourly-three-icon {
+    margin: auto;
+    grid-area: icon;
+}
+
+.grid1-right-hourly-three-temp {
+    margin: auto;
+    grid-area: temp;
+    font-weight: normal;
+    color: white;
+    font-size: 20px; 
+}
+
+.grid1-right-hourly-four {
+    margin: auto;
+
+    display: grid;
+    grid-template-areas: 
+    "time icon temp";
+    grid-template-columns: 1fr, 1fr, 1fr;
+}
+
+.grid1-right-hourly-four-time {
+    margin: auto;
+    grid-area: time;
+    font-weight: normal;
+    color: white;
+    font-size: 20px; 
+}
+
+.grid1-right-hourly-four-icon {
+    margin: auto;
+    grid-area: icon;
+}
+
+.grid1-right-hourly-four-temp {
+    margin: auto;
+    grid-area: temp;
+    font-weight: normal;
+    color: white;
+    font-size: 20px; 
+}
+
+.grid1-right-hourly-five {
+    margin: auto;
+
+    display: grid;
+    grid-template-areas: 
+    "time icon temp";
+    grid-template-columns: 1fr, 1fr, 1fr;
+}
+
+.grid1-right-hourly-five-time {
+    margin: auto;
+    grid-area: time;
+    font-weight: normal;
+    color: white;
+    font-size: 20px; 
+}
+
+.grid1-right-hourly-five-icon {
+    margin: auto;
+    grid-area: icon;
+}
+
+.grid1-right-hourly-five-temp {
+    margin: auto;
+    grid-area: temp;
+    font-weight: normal;
+    color: white;
+    font-size: 20px; 
+}
+
+.grid1-right-hourly-six {
+    margin: auto;
+
+    display: grid;
+    grid-template-areas: 
+    "time icon temp";
+    grid-template-columns: 1fr, 1fr, 1fr;
+}
+
+.grid1-right-hourly-six-time {
+    margin: auto;
+    grid-area: time;
+    font-weight: normal;
+    color: white;
+    font-size: 20px; 
+}
+
+.grid1-right-hourly-six-icon {
+    margin: auto;
+    grid-area: icon;
+}
+
+.grid1-right-hourly-six-temp {
+    margin: auto;
+    grid-area: temp;
+    font-weight: normal;
+    color: white;
+    font-size: 20px; 
+}
+
+.grid1-right-hourly-seven {
+    margin: auto;
+
+    display: grid;
+    grid-template-areas: 
+    "time icon temp";
+    grid-template-columns: 1fr, 1fr, 1fr;
+}
+
+.grid1-right-hourly-seven-time {
+    margin: auto;
+    grid-area: time;
+    font-weight: normal;
+    color: white;
+    font-size: 20px; 
+}
+
+.grid1-right-hourly-seven-icon {
+    margin: auto;
+    grid-area: icon;
+}
+
+.grid1-right-hourly-seven-temp {
+    margin: auto;
+    grid-area: temp;
+    font-weight: normal;
+    color: white;
+    font-size: 20px; 
+}
+
+.grid1-right-hourly-eight {
+    margin: auto;
+
+    display: grid;
+    grid-template-areas: 
+    "time icon temp";
+    grid-template-columns: 1fr, 1fr, 1fr;
+}
+
+.grid1-right-hourly-eight-time {
+    margin: auto;
+    grid-area: time;
+    font-weight: normal;
+    color: white;
+    font-size: 20px; 
+}
+
+.grid1-right-hourly-eight-icon {
+    margin: auto;
+    grid-area: icon;
+}
+
+.grid1-right-hourly-eight-temp {
+    margin: auto;
+    grid-area: temp;
+    font-weight: normal;
+    color: white;
+    font-size: 20px; 
+}
+
+.grid1-right-hourly-nine {
+    margin: auto;
+
+    display: grid;
+    grid-template-areas: 
+    "time icon temp";
+    grid-template-columns: 1fr, 1fr, 1fr;
+}
+
+.grid1-right-hourly-nine-time {
+    margin: auto;
+    grid-area: time;
+    font-weight: normal;
+    color: white;
+    font-size: 20px; 
+}
+
+.grid1-right-hourly-nine-icon {
+    margin: auto;
+    grid-area: icon;
+}
+
+.grid1-right-hourly-nine-temp {
+    margin: auto;
+    grid-area: temp;
+    font-weight: normal;
+    color: white;
+    font-size: 20px; 
+}
+
+.grid1-right-hourly-ten {
+    margin: auto;
+
+    display: grid;
+    grid-template-areas: 
+    "time icon temp";
+    grid-template-columns: 1fr, 1fr, 1fr;
+}
+
+.grid1-right-hourly-ten-time {
+    margin: auto;
+    grid-area: time;
+    font-weight: normal;
+    color: white;
+    font-size: 20px; 
+}
+
+.grid1-right-hourly-ten-icon {
+    margin: auto;
+    grid-area: icon;
+}
+
+.grid1-right-hourly-ten-temp {
+    margin: auto;
+    grid-area: temp;
+    font-weight: normal;
+    color: white;
+    font-size: 20px; 
 }
 
 .bottom {
@@ -290,7 +565,9 @@ h3 {
 .bottom-title {
     margin: auto;
     margin-bottom: 55px;
-    margin-left: 103px;
+    font-weight: bolder;
+    color: #13f28a;
+    font-size: 2em;
 }
 
 .bottom-forecastgrid {
@@ -319,6 +596,50 @@ h3 {
     background-color: #9998be;
 }
 
+.bottom-forecastgrid-one-dayofweek {
+    margin: auto;
+    margin-top: 15px;
+    margin-left: 15px;
+    font-weight: normal;
+    color: black;
+    font-size: 20px;
+}
+
+.bottom-forecastgrid-one-date {
+    margin: auto;
+    margin-top: 15px;
+    margin-left: 15px;
+    font-weight: normal;
+    color: black;
+    font-size: 20px;
+}
+
+.bottom-forecastgrid-one-highlow {
+    margin: auto;
+    margin-top: 22px;
+    margin-bottom: 22px;
+    text-align: center;
+
+    display: grid;
+    grid-template-areas: 
+    "high low";
+    grid-template-columns: 1fr, 1fr;
+}
+
+.bottom-forecastgrid-one-highlow-high{
+    font-weight: bold;
+    color: white;
+    font-size: 2em;
+    grid-area: high;
+}
+
+.bottom-forecastgrid-one-highlow-low {
+    font-weight: bold;
+    color: white;
+    font-size: 2em;
+    grid-area: low;
+}
+
 .bottom-forecastgrid-two {
     width: 285px;
     height: 414px;
@@ -328,6 +649,24 @@ h3 {
     margin-left: 18px;
     grid-area: two;
     background-color: #9998be;
+}
+
+.bottom-forecastgrid-two-dayofweek {
+    margin: auto;
+    margin-top: 15px;
+    margin-left: 15px;
+    font-weight: normal;
+    color: black;
+    font-size: 20px;
+}
+
+.bottom-forecastgrid-two-date {
+    margin: auto;
+    margin-top: 15px;
+    margin-left: 15px;
+    font-weight: normal;
+    color: black;
+    font-size: 20px;
 }
 
 .bottom-forecastgrid-three {
@@ -341,6 +680,24 @@ h3 {
     background-color: #9998be;
 }
 
+.bottom-forecastgrid-three-dayofweek {
+    margin: auto;
+    margin-top: 15px;
+    margin-left: 15px;
+    font-weight: normal;
+    color: black;
+    font-size: 20px;
+}
+
+.bottom-forecastgrid-three-date {
+    margin: auto;
+    margin-top: 15px;
+    margin-left: 15px;
+    font-weight: normal;
+    color: black;
+    font-size: 20px;
+}
+
 .bottom-forecastgrid-four {
     width: 285px;
     height: 414px;
@@ -350,6 +707,24 @@ h3 {
     margin-left: 18px;
     grid-area: four;
     background-color: #9998be;
+}
+
+.bottom-forecastgrid-four-dayofweek {
+    margin: auto;
+    margin-top: 15px;
+    margin-left: 15px;
+    font-weight: normal;
+    color: black;
+    font-size: 20px;
+}
+
+.bottom-forecastgrid-four-date {
+    margin: auto;
+    margin-top: 15px;
+    margin-left: 15px;
+    font-weight: normal;
+    color: black;
+    font-size: 20px;
 }
 
 .bottom-forecastgrid-five {
@@ -362,6 +737,24 @@ h3 {
     margin-left: 18px;
     grid-area: five;
     background-color: #9998be;
+}
+
+.bottom-forecastgrid-five-dayofweek {
+    margin: auto;
+    margin-top: 15px;
+    margin-left: 15px;
+    font-weight: normal;
+    color: black;
+    font-size: 20px;
+}
+
+.bottom-forecastgrid-five-date {
+    margin: auto;
+    margin-top: 15px;
+    margin-left: 15px;
+    font-weight: normal;
+    color: black;
+    font-size: 20px;
 }
 
 @media screen and (max-width: 1024) and (min-width: 768px){}
