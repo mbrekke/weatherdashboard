@@ -1,0 +1,241 @@
+@import url('https://fonts.googleapis.com/css2?family=Muli:wght@500&display=swap');
+
+body {
+    font-family: "Muli";
+    background-color: #1d1c40;
+}
+
+.grid1 {
+    width: 100vw;
+    height: 1401px;
+    position: absolute;
+    margin: auto;
+    margin-top: 10px;
+    margin-right: 45px;
+    margin-left: 97px;
+
+    display: grid;
+    grid-template-areas: 
+    "left right";
+    grid-template-columns: 1fr, 1fr;
+}
+
+.grid1-left {
+    width: 585px;
+    height: 1401px;
+    margin: auto;
+    grid-area: left;
+}
+
+.grid1-left-location {
+    font-weight: bold;
+    color: #13f28a;
+    font-size: larger;
+}
+
+.grid1-right {
+    width: 405px;
+    height: 1401px;
+    margin: auto;
+    grid-area: right;
+    background-color: #575684;
+}
+
+.grid1-right-date {
+    font-weight: bold;
+    color: #13f28a;
+    font-size: large;
+}
+
+.grid1-right-time{
+    font-weight: normal;
+    color: #13f28a;
+    font-size: medium;
+}
+
+.grid1-right-icon {
+    align-items: center;
+}
+
+.grid1-right-currenttemp {
+    font-weight: bold;
+    color: white;
+    font-size: x-large;
+}
+
+.grid1-right-highlow {
+    margin: auto;
+
+    display: grid;
+    grid-template-areas: 
+    "high low";
+    grid-template-columns: 1fr, 1fr;
+}
+
+.grid1-right-highlow-high {
+    font-weight: bold;
+    color: white;
+    font-size: small;
+    grid-area: high;
+}
+
+.grid1-right-highlow-low {
+    font-weight: bold;
+    color: white;
+    font-size: small;
+    grid-area: low;
+}
+
+.grid1-right-other {
+    margin: auto;
+}
+
+.grid1-right-other-top {
+    margin: auto;
+
+    display: grid;
+    grid-template-areas: 
+    "one two three";
+    grid-template-columns: 1fr, 1fr, 1fr;
+}
+
+.grid1-right-other-top-uv {
+    margin: auto;
+    grid-area: one;
+}
+
+.grid1-right-other-top-uv-title {
+    font-weight: normal;
+    color: white;
+    font-size: small;
+}
+
+.grid1-right-other-top-uv-number {
+    font-weight: normal;
+    color: white;
+    font-size: medium;
+}
+
+.grid1-right-other-top-chanceofrain {
+    margin: auto;
+    grid-area: two;
+}
+
+.grid1-right-other-top-chanceofrain-title {
+    font-weight: normal;
+    color: white;
+    font-size: small; 
+}
+
+.grid1-right-other-top-chanceofrain-number {
+    font-weight: normal;
+    color: white;
+    font-size: medium;
+}
+
+.grid1-right-other-top-humidity {
+    margin: auto;
+    grid-area: three;
+}
+
+.grid1-right-other-top-humidity-title {
+    font-weight: normal;
+    color: white;
+    font-size: small; 
+}
+
+.grid1-right-other-top-humidity-number {
+    font-weight: normal;
+    color: white;
+    font-size: medium;
+}
+
+.grid1-right-other-bottom {
+    margin: auto;
+
+    display: grid;
+    grid-template-areas: 
+    "one two";
+    grid-template-columns: 1fr, 1fr;
+}
+
+.grid1-right-other-bottom-wind {
+    margin: auto;
+    grid-area: one;
+}
+
+.grid1-right-other-bottom-wind-title {
+    font-weight: normal;
+    color: white;
+    font-size: small; 
+}
+
+.grid1-right-other-bottom-wind-number {
+    font-weight: normal;
+    color: white;
+    font-size: medium;
+}
+
+.grid1-right-other-bottom-visibility {
+    margin: auto;
+    grid-area: two;
+}
+
+.grid1-right-other-bottom-visibility-title {
+    font-weight: normal;
+    color: white;
+    font-size: small; 
+}
+
+.grid1-right-other-bottom-visibility-number {
+    font-weight: normal;
+    color: white;
+    font-size: medium;
+}
+
+.grid1-right-hourlytitle {
+    margin: auto;
+    text-align: center;
+    font-weight: bold;
+    color: #13f28a;
+    font-size: large;
+}
+
+.grid1-right-hourly {
+    margin: auto;
+    align-content: center;
+}
+
+.grid1-right-hourly-one {
+    margin: auto;
+
+    display: grid;
+    grid-template-areas: 
+    "time icon temp";
+    grid-template-columns: 1fr, 1fr, 1fr;
+}
+
+.grid1-right-hourly-one-time {
+    margin: auto;
+    grid-area: time;
+    font-weight: normal;
+    color: white;
+    font-size: small; 
+}
+
+.grid1-right-hourly-one-icon {
+    margin: auto;
+    grid-area: icon;
+}
+
+.grid1-right-hourly-one-temp {
+    margin: auto;
+    grid-area: temp;
+    font-weight: normal;
+    color: white;
+    font-size: small; 
+}
+
+@media screen and (max-width: 767px)
+
+@media screen and (max-width: 1024px) and (min-width: 768px) 
