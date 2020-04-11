@@ -12,7 +12,7 @@ body {
     margin: auto;
     margin-top: 10px;
     margin-right: 45px;
-    margin-left: 97px;
+    margin-left: 103px;
 
     display: grid;
     grid-template-areas: 
@@ -27,10 +27,32 @@ body {
     grid-area: left;
 }
 
-.grid1-left-location {
+.grid1-left-search {
+    width: 663px;
+    height: 72px;
+    margin: auto;
+    margin-top: 284px;
+    margin-bottom: 55px;
+    background-color: #575684;
+}
+
+.grid-left-location {
+    margin: auto;
+    margin-bottom: 55px;
+}
+
+h1 {
     font-weight: bold;
     color: #13f28a;
-    font-size: larger;
+    font-size: xx-large;
+}
+
+.grid-left-radar {
+    width: 585px;
+    height: 482px;
+    margin: auto;
+    margin-bottom: 55px;
+    background-color: #575684;
 }
 
 .grid1-right {
@@ -45,22 +67,43 @@ body {
     font-weight: bold;
     color: #13f28a;
     font-size: large;
+    text-align: center;
 }
 
-.grid1-right-time{
+.grid1-right-time {
+    margin: auto;
+}
+
+h2 {
     font-weight: normal;
     color: #13f28a;
-    font-size: medium;
+    font-size: large;
+    text-align: center;
 }
 
-.grid1-right-icon {
-    align-items: center;
+.grid1-right-icon{
+    margin: auto;
+    margin-top: 18px;
+    margin-bottom: 18px;
 }
+
+img {
+    display: block;
+    margin: auto;
+    width: auto;
+  }
 
 .grid1-right-currenttemp {
     font-weight: bold;
     color: white;
     font-size: x-large;
+}
+
+h3 {
+    font-weight: bolder;
+    color: white;
+    font-size: x-large;
+    text-align: center;
 }
 
 .grid1-right-highlow {
@@ -236,6 +279,91 @@ body {
     font-size: small; 
 }
 
-@media screen and (max-width: 767px)
+.bottom {
+    width: 100vw;
+    height: 667px;
+    position: absolute;
+    margin: auto;
+    margin-top: 1451px;
+}
 
-@media screen and (max-width: 1024px) and (min-width: 768px) 
+.bottom-title {
+    margin: auto;
+    margin-bottom: 55px;
+    margin-left: 103px;
+}
+
+.bottom-forecastgrid {
+    width: 1551px;
+    height: 436px;
+    margin: auto;
+    margin-right: 55px;
+    margin-bottom: 55px;
+    margin-left: 103px;
+    background-color: #575684;
+
+    display: grid;
+    grid-template-areas: 
+    "one two three four five";
+    grid-template-columns: 1fr, 1fr, 1fr, 1fr, 1fr;
+}
+
+.bottom-forecastgrid-one {
+    width: 285px;
+    height: 414px;
+    margin: auto;
+    margin-top: 11px;
+    margin-bottom: 11px;
+    margin-left: 18px;
+    grid-area: one;
+    background-color: #9998be;
+}
+
+.bottom-forecastgrid-two {
+    width: 285px;
+    height: 414px;
+    margin: auto;
+    margin-top: 11px;
+    margin-bottom: 11px;
+    margin-left: 18px;
+    grid-area: two;
+    background-color: #9998be;
+}
+
+.bottom-forecastgrid-three {
+    width: 285px;
+    height: 414px;
+    margin: auto;
+    margin-top: 11px;
+    margin-bottom: 11px;
+    margin-left: 18px;
+    grid-area: three;
+    background-color: #9998be;
+}
+
+.bottom-forecastgrid-four {
+    width: 285px;
+    height: 414px;
+    margin: auto;
+    margin-top: 11px;
+    margin-bottom: 11px;
+    margin-left: 18px;
+    grid-area: four;
+    background-color: #9998be;
+}
+
+.bottom-forecastgrid-five {
+    width: 285px;
+    height: 414px;
+    margin: auto;
+    margin-top: 11px;
+    margin-right: 18px;
+    margin-bottom: 11px;
+    margin-left: 18px;
+    grid-area: five;
+    background-color: #9998be;
+}
+
+@media screen and (max-width: 1024) and (min-width: 768px){}
+
+@media screen and (max-width: 767px) {}
