@@ -3,303 +3,285 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="keys.js"></script>
+    <script src="https://unpkg.com/@warnick/forecast-js/js/forecast.min.js" defer></script>
+    <link rel="stylesheet" href="https://unpkg.com/@warnick/forecast-js/css/forecast.css">
     <link rel="stylesheet" href="style.css">
     <title>Weather Dashboard</title>
 </head>
 <body>
-   <div class="grid1">
-        <div class="grid1-left">
-            <div class="grid1-left-search"></div>
-            <div class="grid-left-location">
-                Manhattan, KS 66502
+    <div class="results" id="app">
+        <div class="grid1">
+            <div class="grid1-left">
+                <div class="grid1-left-search">
+                    <input
+                        placeholder="Enter Your ZIP Code"
+                        v-on:input="zip_trigger"
+                        name="name"
+                        id="zip"
+                    />
+                </div>
+                <div class="grid-left-location">
+                    Manhattan, KS 66502
+                </div>
+                <div class="grid-left-radar"></div>
             </div>
-            <div class="grid-left-radar"></div>
+            <div class="grid1-right">
+                <div class="grid1-right-date">
+                    {{time.day}} {{time.date}}
+                </div>
+                <div class="grid1-right-time">
+                    {{time.hour_12}}:{{time.minute}}:{{time.seconds}} {{time.ampm}}
+                </div>
+                <div class="grid1-right-icon">
+                </div>
+                <div class="grid1-right-currenttemp">
+                    {{current.temp.current}}
+                </div>
+                <div class="grid1-right-highlow">
+                    <div class="grid1-right-highlow-high">
+                        {{current.temp.high}}
+                    </div>
+                    <div class="grid1-right-highlow-low">
+                        {{current.temp.low}}
+                    </div>
+                </div>
+                <div class="grid1-right-other">
+                    <div class="grid1-right-other-top">
+                        <div class="grid1-right-other-top-uv">
+                            <div class="grid1-right-other-top-uv-title">
+                                <p>UV Index</p>
+                            </div>
+                            <div class="grid1-right-other-top-uv-number">
+                                <p>{{current.uv}}</p>
+                            </div>
+                        </div>
+                        <div class="grid1-right-other-top-chanceofrain">
+                            <div class="grid1-right-other-top-chanceofrain-title">
+                                <p> Chance of rain</p>
+                            </div>
+                            <div class="grid1-right-other-top-chanceofrain-number">
+                                <p>40%</p>
+                            </div>
+                        </div>
+                        <div class="grid1-right-other-top-humidity">
+                            <div class="grid1-right-other-top-humidity-title">
+                                <p>Humidity</p>
+                            </div>
+                            <div class="grid1-right-other-top-humidity-number">
+                                <p>46%</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="grid1-right-other-bottom">
+                        <div class="grid1-right-other-bottom-wind">
+                            <div class="grid1-right-other-bottom-wind-title">
+                                <p>Wind</p>
+                            </div>
+                            <div class="grid1-right-other-bottom-wind-number">
+                                <p>{{current.wind.speed}}</p>
+                            </div>
+                        </div>
+                        <div class="grid1-right-other-bottom-visibility">
+                            <div class="grid1-right-other-bottom-visibility-title">
+                                <p>Visibility</p>
+                            </div>
+                            <div class="grid1-right-other-bottom-visibility-number">
+                                <p>10 mi</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="grid1-right-hourlytitle">
+                    Hourly Forecast
+                </div>
+                <div class="grid1-right-hourly">
+                    <div class="grid1-right-hourly-one">
+                        <div class="grid1-right-hourly-one-time">
+                            <p>{{hourly[1].time}}</p>
+                        </div>
+                        <div class="grid1-right-hourly-one-icon"></div>
+                        <div class="grid1-right-hourly-one-temp">
+                            <p>{{hourly[1].temperature}}</p>
+                        </div>
+                    </div>
+                    <div class="grid1-right-hourly-two">
+                        <div class="grid1-right-hourly-two-time">
+                            <p>{{hourly[2].time}}</p>
+                        </div>
+                        <div class="grid1-right-hourly-two-icon"></div>
+                        <div class="grid1-right-hourly-two-temp">
+                            <p>{{hourly[2].temperature}}</p>
+                        </div>
+                    </div>
+                    <div class="grid1-right-hourly-three">
+                        <div class="grid1-right-hourly-three-time">
+                            <p>{{hourly[3].time}}</p>
+                        </div>
+                        <div class="grid1-right-hourly-three-icon"></div>
+                        <div class="grid1-right-hourly-three-temp">
+                            <p>{{hourly[3].temperature}}</p>
+                        </div>
+                    </div>
+                    <div class="grid1-right-hourly-four">
+                        <div class="grid1-right-hourly-four-time">
+                            <p>{{hourly[4].time}}</p>
+                        </div>
+                        <div class="grid1-right-hourly-four-icon"></div>
+                        <div class="grid1-right-hourly-four-temp">
+                            <p>{{hourly[4].temperature}}</p>
+                        </div>
+                    </div>
+                    <div class="grid1-right-hourly-five">
+                        <div class="grid1-right-hourly-five-time">
+                            <p>{{hourly[5].time}}</p>
+                        </div>
+                        <div class="grid1-right-hourly-five-icon"></div>
+                        <div class="grid1-right-hourly-five-temp">
+                            <p>{{hourly[5].temperature}}</p>
+                        </div>
+                    </div>
+                    <div class="grid1-right-hourly-six">
+                        <div class="grid1-right-hourly-six-time">
+                            <p>{{hourly[6].time}}</p>
+                        </div>
+                        <div class="grid1-right-hourly-six-icon"></div>
+                        <div class="grid1-right-hourly-six-temp">
+                            <p>{{hourly[6].temperature}}</p>
+                        </div>
+                    </div>
+                    <div class="grid1-right-hourly-seven">
+                        <div class="grid1-right-hourly-seven-time">
+                            <p>{{hourly[7].time}}</p>
+                        </div>
+                        <div class="grid1-right-hourly-seven-icon"></div>
+                        <div class="grid1-right-hourly-seven-temp">
+                            <p>{{hourly[7].temperature}}</p>
+                        </div>
+                    </div>
+                    <div class="grid1-right-hourly-eight">
+                        <div class="grid1-right-hourly-eight-time">
+                            <p>{{hourly[8].time}}</p>
+                        </div>
+                        <div class="grid1-right-hourly-eight-icon"></div>
+                        <div class="grid1-right-hourly-eight-temp">
+                            <p>{{hourly[8].temperature}}</p>
+                        </div>
+                    </div>
+                    <div class="grid1-right-hourly-nine">
+                        <div class="grid1-right-hourly-nine-time">
+                            <p>{{hourly[9].time}}</p>
+                        </div>
+                        <div class="grid1-right-hourly-nine-icon"></div>
+                        <div class="grid1-right-hourly-nine-temp">
+                            <p>{{hourly[9].temperature}}</p>
+                        </div>
+                    </div>
+                    <div class="grid1-right-hourly-ten">
+                        <div class="grid1-right-hourly-ten-time">
+                            <p>{{hourly[10].time}}</p>
+                        </div>
+                        <div class="grid1-right-hourly-ten-icon"></div>
+                        <div class="grid1-right-hourly-ten-temp">
+                            <p>{{hourly[10].temperature}}</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+    </div>
+    <div class="bottom">
+        <div class="bottom-title">
+            Weekly Forecast
         </div>
-        <div class="grid1-right">
-            <div class="grid1-right-date">
-                Thursday, April 2, 2020
-            </div>
-            <div class="grid1-right-time">
-                1:57:14
-            </div>
-            <div class="grid1-right-icon">
-                <img src="img/cloudy.png" alt="sun behind cloud" style="width:256px;height:256;">
-            </div>
-            <div class="grid1-right-currenttemp">
-                70
-            </div>
-            <div class="grid1-right-highlow">
-                <div class="grid1-right-highlow-high">
-                    68
-                </div>
-                <div class="grid1-right-highlow-low">
-                    40
-                </div>
-            </div>
-            <div class="grid1-right-other">
-                <div class="grid1-right-other-top">
-                    <div class="grid1-right-other-top-uv">
-                        <div class="grid1-right-other-top-uv-title">
-                            <p>UV Index</p>
-                        </div>
-                        <div class="grid1-right-other-top-uv-number">
-                            <p>3</p>
-                        </div>
+        <div class="bottom-forecastgrid">
+                <div class="bottom-forecastgrid-one">
+                    <div class="bottom-forecastgrid-one-dayofweek">
+                        {{forecast[1].weekday}}
                     </div>
-                    <div class="grid1-right-other-top-chanceofrain">
-                        <div class="grid1-right-other-top-chanceofrain-title">
-                            <p> Chance of rain</p>
-                        </div>
-                        <div class="grid1-right-other-top-chanceofrain-number">
-                            <p>40%</p>
-                        </div>
+                    <div class="bottom-forecastgrid-one-icon">
+                        {{forecast[1].description_icon}}
                     </div>
-                    <div class="grid1-right-other-top-humidity">
-                        <div class="grid1-right-other-top-humidity-title">
-                            <p>Humidity</p>
+                    <div class="bottom-forecastgrid-one-highlow">
+                        <div class="bottom-forecastgrid-one-highlow-high">
+                            {{forecast[1].max_temp}}
                         </div>
-                        <div class="grid1-right-other-top-humidity-number">
-                            <p>46%</p>
+                        <div class="bottom-forecastgrid-one-highlow-low">
+                            {{forecast[1].min_temp}}
                         </div>
                     </div>
                 </div>
-                <div class="grid1-right-other-bottom">
-                    <div class="grid1-right-other-bottom-wind">
-                        <div class="grid1-right-other-bottom-wind-title">
-                            <p>Wind</p>
-                        </div>
-                        <div class="grid1-right-other-bottom-wind-number">
-                            <p>SSE 16mph</p>
-                        </div>
+                <div class="bottom-forecastgrid-two">
+                    <div class="bottom-forecastgrid-two-dayofweek">
+                        {{forecast[2].weekday}}
                     </div>
-                    <div class="grid1-right-other-bottom-visibility">
-                        <div class="grid1-right-other-bottom-visibility-title">
-                            <p>Visibility</p>
+                    <div class="bottom-forecastgrid-two-icon">
+                        {{forecast[2].description_icon}}
+                    </div>
+                    <div class="bottom-forecastgrid-two-highlow">
+                        <div class="bottom-forecastgrid-two-highlow-high">
+                            {{forecast[2].max_temp}}
                         </div>
-                        <div class="grid1-right-other-bottom-visibility-number">
-                            <p>10 mi</p>
+                        <div class="bottom-forecastgrid-two-highlow-low">
+                            {{forecast[2].min_temp}}
                         </div>
                     </div>
                 </div>
-            </div>
-            <div class="grid1-right-hourlytitle">
-                Hourly Forecast
-            </div>
-            <div class="grid1-right-hourly">
-                <div class="grid1-right-hourly-one">
-                    <div class="grid1-right-hourly-one-time">
-                        <p>2 pm</p>
+                <div class="bottom-forecastgrid-three">
+                    <div class="bottom-forecastgrid-three-dayofweek">
+                        {{forecast[3].weekday}}
                     </div>
-                    <div class="grid1-right-hourly-one-icon">
-                        <img src="img/cloudy.png" alt="sun behind cloud" style="width:64px;height:64px;">
+                    <div class="bottom-forecastgrid-three-icon">
+                        {{forecast[3].description_icon}}
                     </div>
-                    <div class="grid1-right-hourly-one-temp">
-                        <p>68</p>
-                    </div>
-                </div>
-                <div class="grid1-right-hourly-two">
-                    <div class="grid1-right-hourly-two-time">
-                        <p>3 pm</p>
-                    </div>
-                    <div class="grid1-right-hourly-two-icon">
-                        <img src="img/cloudy.png" alt="sun behind cloud" style="width:64px;height:64px;">
-                    </div>
-                    <div class="grid1-right-hourly-two-temp">
-                        <p>68</p>
+                    <div class="bottom-forecastgrid-three-highlow">
+                        <div class="bottom-forecastgrid-three-highlow-high">
+                            {{forecast[3].max_temp}}
+                        </div>
+                        <div class="bottom-forecastgrid-three-highlow-low">
+                            {{forecast[3].min_temp}}
+                        </div>
                     </div>
                 </div>
-                <div class="grid1-right-hourly-three">
-                    <div class="grid1-right-hourly-three-time">
-                        <p>4 pm</p>
+                <div class="bottom-forecastgrid-four">
+                    <div class="bottom-forecastgrid-four-dayofweek">
+                        {{forecast[4].weekday}}
                     </div>
-                    <div class="grid1-right-hourly-three-icon">
-                        <img src="img/cloudy.png" alt="sun behind cloud" style="width:64px;height:64px;">
+                    <div class="bottom-forecastgrid-four-icon">
+                        {{forecast[4].description_icon}}
                     </div>
-                    <div class="grid1-right-hourly-three-temp">
-                        <p>68</p>
-                    </div>
-                </div>
-                <div class="grid1-right-hourly-four">
-                    <div class="grid1-right-hourly-four-time">
-                        <p>5 pm</p>
-                    </div>
-                    <div class="grid1-right-hourly-four-icon">
-                        <img src="img/cloudy.png" alt="sun behind cloud" style="width:64px;height:64px;">
-                    </div>
-                    <div class="grid1-right-hourly-four-temp">
-                        <p>66</p>
+                    <div class="bottom-forecastgrid-four-highlow">
+                        <div class="bottom-forecastgrid-four-highlow-high">
+                            {{forecast[4].max_temp}}
+                        </div>
+                        <div class="bottom-forecastgrid-four-highlow-low">
+                            {{forecast[4].min_temp}}
+                        </div>
                     </div>
                 </div>
-                <div class="grid1-right-hourly-five">
-                    <div class="grid1-right-hourly-five-time">
-                        <p>6 pm</p>
+                <div class="bottom-forecastgrid-five">
+                    <div class="bottom-forecastgrid-five-dayofweek">
+                        {{forecast[5].weekday}}
                     </div>
-                    <div class="grid1-right-hourly-five-icon">
-                        <img src="img/cloudy.png" alt="sun behind cloud" style="width:64px;height:64px;">
+                    <div class="bottom-forecastgrid-five-icon">
+                        {{forecast[5].description_icon}}
                     </div>
-                    <div class="grid1-right-hourly-five-temp">
-                        <p>65</p>
-                    </div>
-                </div>
-                <div class="grid1-right-hourly-six">
-                    <div class="grid1-right-hourly-six-time">
-                        <p>7 pm</p>
-                    </div>
-                    <div class="grid1-right-hourly-six-icon">
-                        <img src="img/cloudy.png" alt="sun behind cloud" style="width:64px;height:64px;">
-                    </div>
-                    <div class="grid1-right-hourly-six-temp">
-                        <p>63</p>
-                    </div>
-                </div>
-                <div class="grid1-right-hourly-seven">
-                    <div class="grid1-right-hourly-seven-time">
-                        <p>8 pm</p>
-                    </div>
-                    <div class="grid1-right-hourly-seven-icon">
-                        <img src="img/cloudy.png" alt="sun behind cloud" style="width:64px;height:64px;">
-                    </div>
-                    <div class="grid1-right-hourly-seven-temp">
-                        <p>63</p>
-                    </div>
-                </div>
-                <div class="grid1-right-hourly-eight">
-                    <div class="grid1-right-hourly-eight-time">
-                        <p>9 pm</p>
-                    </div>
-                    <div class="grid1-right-hourly-eight-icon">
-                        <img src="img/rain.png" alt="sun behind raincloud" style="width:64px;height:64px;">
-                    </div>
-                    <div class="grid1-right-hourly-eight-temp">
-                        <p>61</p>
-                    </div>
-                </div>
-                <div class="grid1-right-hourly-nine">
-                    <div class="grid1-right-hourly-nine-time">
-                        <p>10 pm</p>
-                    </div>
-                    <div class="grid1-right-hourly-nine-icon">
-                        <img src="img/rain.png" alt="sun behind raincloud" style="width:64px;height:64px;">
-                    </div>
-                    <div class="grid1-right-hourly-nine-temp">
-                        <p>59</p>
-                    </div>
-                </div>
-                <div class="grid1-right-hourly-ten">
-                    <div class="grid1-right-hourly-ten-time">
-                        <p>11 pm</p>
-                    </div>
-                    <div class="grid1-right-hourly-ten-icon">
-                        <img src="img/rain.png" alt="sun behind raincloud" style="width:64px;height:64px;">
-                    </div>
-                    <div class="grid1-right-hourly-ten-temp">
-                        <p>57</p>
+                    <div class="bottom-forecastgrid-five-highlow">
+                        <div class="bottom-forecastgrid-five-highlow-high">
+                            {{forecast[5].max_temp}}
+                        </div>
+                        <div class="bottom-forecastgrid-five-highlow-low">
+                            {{forecast[5].min_temp}}
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
-   </div>
-   <div class="bottom">
-       <div class="bottom-title">
-           Weekly Forecast
-       </div>
-       <div class="bottom-forecastgrid">
-            <div class="bottom-forecastgrid-one">
-                <div class="bottom-forecastgrid-one-dayofweek">
-                    Friday
-                </div>
-                <div class="bottom-forecastgrid-one-date">
-                    April 3, 2020
-                </div>
-                <div class="bottom-forecastgrid-one-icon">
-                    <img src="img/cloudy.png" alt="sun benhind cloud" style="width:256px;height:256px;">
-                </div>
-                <div class="bottom-forecastgrid-one-highlow">
-                    <div class="bottom-forecastgrid-one-highlow-high">
-                        44
-                    </div>
-                    <div class="bottom-forecastgrid-one-highlow-low">
-                        31
-                    </div>
-                </div>
-            </div>
-            <div class="bottom-forecastgrid-two">
-                <div class="bottom-forecastgrid-two-dayofweek">
-                    Saturday
-                </div>
-                <div class="bottom-forecastgrid-two-date">
-                    April 4, 2020
-                </div>
-                <div class="bottom-forecastgrid-two-icon">
-                    <img src="img/cloudy.png" alt="sun benhind cloud" style="width:256px;height:256px;">
-                </div>
-                <div class="bottom-forecastgrid-two-highlow">
-                    <div class="bottom-forecastgrid-two-highlow-high">
-                        53
-                    </div>
-                    <div class="bottom-forecastgrid-two-highlow-low">
-                        38
-                    </div>
-                </div>
-            </div>
-            <div class="bottom-forecastgrid-three">
-                <div class="bottom-forecastgrid-three-dayofweek">
-                    Sunday
-                </div>
-                <div class="bottom-forecastgrid-three-date">
-                    April 5, 2020
-                </div>
-                <div class="bottom-forecastgrid-three-icon">
-                    <img src="img/cloudy.png" alt="sun benhind cloud" style="width:256px;height:256px;">
-                </div>
-                <div class="bottom-forecastgrid-three-highlow">
-                    <div class="bottom-forecastgrid-three-highlow-high">
-                        63
-                    </div>
-                    <div class="bottom-forecastgrid-three-highlow-low">
-                        54
-                    </div>
-                </div>
-            </div>
-            <div class="bottom-forecastgrid-four">
-                <div class="bottom-forecastgrid-four-dayofweek">
-                    Monday
-                </div>
-                <div class="bottom-forecastgrid-four-date">
-                    April 6, 2020
-                </div>
-                <div class="bottom-forecastgrid-four-icon">
-                    <img src="img/sun.png" alt="Sun" style="width:256px;height:256px;">
-                </div>
-                <div class="bottom-forecastgrid-four-highlow">
-                    <div class="bottom-forecastgrid-four-highlow-high">
-                        76
-                    </div>
-                    <div class="bottom-forecastgrid-four-highlow-low">
-                        63
-                    </div>
-                </div>
-            </div>
-            <div class="bottom-forecastgrid-five">
-                <div class="bottom-forecastgrid-five-dayofweek">
-                    Tuesday
-                </div>
-                <div class="bottom-forecastgrid-five-date">
-                    April 7, 2020
-                </div>
-                <div class="bottom-forecastgrid-five-icon">
-                    <img src="img/sun.png" alt="Sun" style="width:256px;height:256px;">
-                </div>
-                <div class="bottom-forecastgrid-five-highlow">
-                    <div class="bottom-forecastgrid-five-highlow-high">
-                        83
-                    </div>
-                    <div class="bottom-forecastgrid-five-highlow-low">
-                        56
-                    </div>
-                </div>
-            </div>
-       </div>
-   </div>
+        <div class="icon">
+            <img
+              v-bind:src="'/img/' + forecast[1].description_icon + '.png'"
+              v-bind:alt="forecast[1].weather.description"
+            />
+        </div>
+    </div>
 </body>
 </html>
