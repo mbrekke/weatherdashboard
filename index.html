@@ -22,7 +22,7 @@
                     />
                 </div>
                 <div class="grid-left-location">
-                    {{location.zip}} {{location.state}} {{city}}
+                    {{location.name}} {{location.state}} 
                 </div>
                 <div id="map"></div>
             </div>
@@ -34,6 +34,7 @@
                     {{time.hour_12}}:{{time.minute}}:{{time.seconds}} {{time.ampm}}
                 </div>
                 <div class="grid1-right-icon">
+                    <div class="icon" v-bind:class="'icon_'+forecast[0].description_icon"></div>
                 </div>
                 <div class="grid1-right-currenttemp">
                     {{current.temp.current}}
@@ -100,7 +101,6 @@
                         <div class="grid1-right-hourly-one-time">
                             <p>{{hourly[1].time}}</p>
                         </div>
-                        <div class="grid1-right-hourly-one-icon"></div>
                         <div class="grid1-right-hourly-one-temp">
                             <p>{{hourly[1].temperature}}</p>
                         </div>
@@ -109,7 +109,6 @@
                         <div class="grid1-right-hourly-two-time">
                             <p>{{hourly[2].time}}</p>
                         </div>
-                        <div class="grid1-right-hourly-two-icon"></div>
                         <div class="grid1-right-hourly-two-temp">
                             <p>{{hourly[2].temperature}}</p>
                         </div>
@@ -118,7 +117,6 @@
                         <div class="grid1-right-hourly-three-time">
                             <p>{{hourly[3].time}}</p>
                         </div>
-                        <div class="grid1-right-hourly-three-icon"></div>
                         <div class="grid1-right-hourly-three-temp">
                             <p>{{hourly[3].temperature}}</p>
                         </div>
@@ -127,7 +125,6 @@
                         <div class="grid1-right-hourly-four-time">
                             <p>{{hourly[4].time}}</p>
                         </div>
-                        <div class="grid1-right-hourly-four-icon"></div>
                         <div class="grid1-right-hourly-four-temp">
                             <p>{{hourly[4].temperature}}</p>
                         </div>
@@ -136,7 +133,6 @@
                         <div class="grid1-right-hourly-five-time">
                             <p>{{hourly[5].time}}</p>
                         </div>
-                        <div class="grid1-right-hourly-five-icon"></div>
                         <div class="grid1-right-hourly-five-temp">
                             <p>{{hourly[5].temperature}}</p>
                         </div>
@@ -145,7 +141,6 @@
                         <div class="grid1-right-hourly-six-time">
                             <p>{{hourly[6].time}}</p>
                         </div>
-                        <div class="grid1-right-hourly-six-icon"></div>
                         <div class="grid1-right-hourly-six-temp">
                             <p>{{hourly[6].temperature}}</p>
                         </div>
@@ -154,7 +149,6 @@
                         <div class="grid1-right-hourly-seven-time">
                             <p>{{hourly[7].time}}</p>
                         </div>
-                        <div class="grid1-right-hourly-seven-icon"></div>
                         <div class="grid1-right-hourly-seven-temp">
                             <p>{{hourly[7].temperature}}</p>
                         </div>
@@ -163,7 +157,6 @@
                         <div class="grid1-right-hourly-eight-time">
                             <p>{{hourly[8].time}}</p>
                         </div>
-                        <div class="grid1-right-hourly-eight-icon"></div>
                         <div class="grid1-right-hourly-eight-temp">
                             <p>{{hourly[8].temperature}}</p>
                         </div>
@@ -172,7 +165,6 @@
                         <div class="grid1-right-hourly-nine-time">
                             <p>{{hourly[9].time}}</p>
                         </div>
-                        <div class="grid1-right-hourly-nine-icon"></div>
                         <div class="grid1-right-hourly-nine-temp">
                             <p>{{hourly[9].temperature}}</p>
                         </div>
@@ -181,7 +173,6 @@
                         <div class="grid1-right-hourly-ten-time">
                             <p>{{hourly[10].time}}</p>
                         </div>
-                        <div class="grid1-right-hourly-ten-icon"></div>
                         <div class="grid1-right-hourly-ten-temp">
                             <p>{{hourly[10].temperature}}</p>
                         </div>
@@ -199,7 +190,7 @@
                         {{forecast[1].weekday}}
                     </div>
                     <div class="bottom-forecastgrid-one-icon">
-                        {{forecast[1].description_icon}}
+                        <div class="icon" v-bind:class="'icon_'+forecast[1].description_icon"></div>
                     </div>
                     <div class="bottom-forecastgrid-one-highlow">
                         <div class="bottom-forecastgrid-one-highlow-high">
@@ -215,7 +206,7 @@
                         {{forecast[2].weekday}}
                     </div>
                     <div class="bottom-forecastgrid-two-icon">
-                        {{forecast[2].description_icon}}
+                        <div class="icon" v-bind:class="'icon_'+forecast[2].description_icon"></div>
                     </div>
                     <div class="bottom-forecastgrid-two-highlow">
                         <div class="bottom-forecastgrid-two-highlow-high">
@@ -231,7 +222,7 @@
                         {{forecast[3].weekday}}
                     </div>
                     <div class="bottom-forecastgrid-three-icon">
-                        {{forecast[3].description_icon}}
+                        <div class="icon" v-bind:class="'icon_'+forecast[3].description_icon"></div>
                     </div>
                     <div class="bottom-forecastgrid-three-highlow">
                         <div class="bottom-forecastgrid-three-highlow-high">
@@ -247,7 +238,7 @@
                         {{forecast[4].weekday}}
                     </div>
                     <div class="bottom-forecastgrid-four-icon">
-                        {{forecast[4].description_icon}}
+                        <div class="icon" v-bind:class="'icon_'+forecast[4].description_icon"></div>
                     </div>
                     <div class="bottom-forecastgrid-four-highlow">
                         <div class="bottom-forecastgrid-four-highlow-high">
@@ -263,7 +254,7 @@
                         {{forecast[5].weekday}}
                     </div>
                     <div class="bottom-forecastgrid-five-icon">
-                        {{forecast[5].description_icon}}
+                        <div class="icon" v-bind:class="'icon_'+forecast[5].description_icon"></div>
                     </div>
                     <div class="bottom-forecastgrid-five-highlow">
                         <div class="bottom-forecastgrid-five-highlow-high">
@@ -275,10 +266,6 @@
                     </div>
                 </div>
             </div>
-        </div>
-        <div class="icon">
-            <img v-bind:src="'/url/' + forecast[0].description_icon + '.png'">
-            <img v-bind:src="'/url/' + forecast[1].description_icon + '.png'">
         </div>
     </div>
 </body>

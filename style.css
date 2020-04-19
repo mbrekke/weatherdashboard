@@ -97,11 +97,6 @@ textarea {
     margin-top: 12px;
 }
 
-img {
-    max-width: 100%;
-    max-height: 100%;
-  }
-
 .grid1-right-currenttemp {
     font-weight: bold;
     color: white;
@@ -865,64 +860,73 @@ img {
     grid-area: low;
 }
 
-.icon_01d {
-    background-image: url("https://raw.githubusercontent.com/ajwarnick/ART300_weather_base/master/img/01d.png");
+.icon {
+    width: 254px;
+    height: 254px;
+    margin: auto;
+    align-content: center;
+    max-width: 100%;
+    max-height: 100%;
+}
+
+.icon_01d, .icon_01n {
+    background-image: url("/img/sun.png");
     background-repeat: no-repeat;
     background-position: center;
     background-size: contain;
   }
   
-  .icon_02d {
-    background-image: url("https://raw.githubusercontent.com/ajwarnick/ART300_weather_base/master/img/02d.png");
+  .icon_02d, .icon_02n {
+    background-image: url("/img/cloudy.png");
     background-repeat: no-repeat;
     background-position: center;
     background-size: contain;
   }
   
-  .icon_03d {
-    background-image: url("https://raw.githubusercontent.com/ajwarnick/ART300_weather_base/master/img/03d.png");
+  .icon_03d, .icon_03n {
+    background-image: url("/img/scattered.png");
     background-repeat: no-repeat;
     background-position: center;
     background-size: contain;
   }
   
-  .icon_04d {
-    background-image: url("https://raw.githubusercontent.com/ajwarnick/ART300_weather_base/master/img/04d.png");
+  .icon_04d, .icon_04n {
+    background-image: url("/img/broken.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+  }
+
+  .icon_09d, .icon_09n {
+    background-image: url("/img/showerrain.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+  }
+
+  .icon_10d, .icon_10n {
+    background-image: url("/img/rain.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+  }
+
+  .icon_11d, .icon_11n {
+    background-image: url("/img/thunderstorm.png");
     background-repeat: no-repeat;
     background-position: center;
     background-size: contain;
   }
   
-  .icon_09d {
-    background-image: url("https://raw.githubusercontent.com/ajwarnick/ART300_weather_base/master/img/09d.png");
+  .icon_13d, .icon_13n {
+    background-image: url("/img/snow.png");
     background-repeat: no-repeat;
     background-position: center;
     background-size: contain;
   }
-  
-  .icon_10d {
-    background-image: url("https://raw.githubusercontent.com/ajwarnick/ART300_weather_base/master/img/10d.png");
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: contain;
-  }
-  
-  .icon_11d {
-    background-image: url("https://raw.githubusercontent.com/ajwarnick/ART300_weather_base/master/img/11d.png");
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: contain;
-  }
-  
-  .icon_13d {
-    background-image: url("https://raw.githubusercontent.com/ajwarnick/ART300_weather_base/master/img/13d.png");
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: contain;
-  }
-  
-  .icon_50d {
-    background-image: url("https://raw.githubusercontent.com/ajwarnick/ART300_weather_base/master/img/50d.png");
+
+  .icon_50d, .icon_50n {
+    background-image: url("/img/wind.png");
     background-repeat: no-repeat;
     background-position: center;
     background-size: contain;
