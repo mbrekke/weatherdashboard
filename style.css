@@ -62,12 +62,9 @@ textarea {
     font-size: 3em;
 }
 
-.grid-left-radar {
-    width: 585px;
-    height: 482px;
-    margin: auto;
-    margin-bottom: 55px;
-    background-color: #575684;
+#map {
+	width: 600px;
+    height: 450px;
 }
 
 .grid1-right {

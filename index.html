@@ -22,9 +22,9 @@
                     />
                 </div>
                 <div class="grid-left-location">
-                    Manhattan, KS 66502
+                    {{location.zip}} {{location.state}} {{city}}
                 </div>
-                <div class="grid-left-radar"></div>
+                <div id="map"></div>
             </div>
             <div class="grid1-right">
                 <div class="grid1-right-date">
@@ -61,7 +61,7 @@
                                 <p> Chance of rain</p>
                             </div>
                             <div class="grid1-right-other-top-chanceofrain-number">
-                                <p>40%</p>
+                                <p>{{current.rain}}</p>
                             </div>
                         </div>
                         <div class="grid1-right-other-top-humidity">
@@ -69,7 +69,7 @@
                                 <p>Humidity</p>
                             </div>
                             <div class="grid1-right-other-top-humidity-number">
-                                <p>46%</p>
+                                <p>{{current.humidity}}</p>
                             </div>
                         </div>
                     </div>
@@ -277,10 +277,8 @@
             </div>
         </div>
         <div class="icon">
-            <img
-              v-bind:src="'/img/' + forecast[1].description_icon + '.png'"
-              v-bind:alt="forecast[1].weather.description"
-            />
+            <img v-bind:src="'/url/' + forecast[0].description_icon + '.png'">
+            <img v-bind:src="'/url/' + forecast[1].description_icon + '.png'">
         </div>
     </div>
 </body>
